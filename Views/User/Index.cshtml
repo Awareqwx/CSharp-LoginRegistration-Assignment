@@ -1,0 +1,30 @@
+@model LoginRegistration.Models.User
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form asp-controller="User" asp-action="Register" method="post">
+    <span asp-validation-for="firstName"></span>
+    <label asp-for="firstName">First Name: </label>
+    <input asp-for="firstName"/><br/>
+    <span asp-validation-for="lastName"></span>
+    <label asp-for="lastName">Last Name: </label>
+    <input asp-for="lastName"/><br/>
+    <span asp-validation-for="email"></span>
+    <label asp-for="email">Email: </label>
+    <input asp-for="email"/><br/>
+    <span asp-validation-for="password"></span>
+    <label asp-for="password">Password:   </label>
+    <input asp-for="password"/><br/>
+    <button type="submit">Register</button>
+</form>
+
+<form action="/login" method="post">
+    <label for="email">
+        Email: <input type="text" name="email">
+    </label><br/>
+    <label for="password">
+        Password: <input type="password" name="password">
+    </label><br/>
+    <input type="submit" value="Login">
+</form>

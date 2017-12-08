@@ -1,0 +1,17 @@
+/*Write all of your CSS here*/
+body{
+    font-family: Arial;
+}
+
+form{
+    margin: 0 0 50px;
+}
+
+input{
+    margin: 5px;
+}
+
+.field-validation-error{
+    font-weight: bold;
+    display: block;
+}
